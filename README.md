@@ -26,15 +26,6 @@ cd ..
 cd ..
 ```
 
-### Back to root of project
-
-```bash
-cd ~
-cd ws
-cd components-grading
-```
-
-
 ### Barrel file <heredoc
 
 ```bash
