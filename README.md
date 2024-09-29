@@ -17,6 +17,9 @@ touch Sample.jsx
 touch Sample.module.css
 touch Sample.styles.js
 touch Sample.stories.jsx
+cd ..
+cd ..
+cd ..
 ```
 
 ## Component <heredoc
