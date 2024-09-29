@@ -21,6 +21,9 @@ touch LoginMolecule.stories.jsx
 touch UserAtom.stories.jsx
 touch PasswordAtom.stories.jsx
 touch LoginButtonAtom.stories.jsx
+cd ..
+cd ..
+cd ..
 ```
 
 ### Back to root of project
