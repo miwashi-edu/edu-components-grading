@@ -9,7 +9,7 @@ mkdir components-grading
 cd components-grading
 git init
 echo '# components-grading' > README.md
-curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
+curl -o .gitignore https://raw.githubusercontent.com/toptal/gitignore/master/templates/Node.gitignore
 git add .
 git commit -m "Initial Commit"
 ```
