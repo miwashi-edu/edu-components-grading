@@ -38,3 +38,9 @@ npm install
 npm run storybook
 ```
 
+## För Lisette
+
+```bash
+npm create vite@latest
+npx storybook init
+```
