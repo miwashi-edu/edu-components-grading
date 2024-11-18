@@ -55,6 +55,7 @@ npm create vite@latest .
 npx storybook init
 # Quit Storybook, it has started in onboarding mode
 rm -rf ./src/stories
+rm -rf ./src/assets
 touch ./src/index.js
 npm pkg set main='./src/index.js' 
 mkdir ./src/components
