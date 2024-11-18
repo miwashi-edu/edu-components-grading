@@ -12,7 +12,7 @@ echo '# components-grading' > README.md
 curl -o .gitignore https://www.toptal.com/developers/gitignore/api/node
 ```
 
-## 2 Ways to set up React with Storybook
+## Two ways to set up React with Storybook
 
 ### 1 - Storybook
 
@@ -53,7 +53,7 @@ npm run storybook
 ```bash
 npm create vite@latest .
 npx storybook init
-# Quit Storybook
+# Quit Storybook, it has started in onboarding mode
 git add .
 git commit -m "Initial Commit"
 ```
