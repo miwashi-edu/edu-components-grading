@@ -9,7 +9,7 @@ mkdir components-grading
 cd components-grading
 git init
 echo '# components-grading' > README.md
-curl -o .gitignore https://raw.githubusercontent.com/toptal/gitignore/master/templates/Node.gitignore
+curl -o .gitignore https://www.toptal.com/developers/gitignore/api/node
 ```
 
 ## 2 Ways to set up React with Storybook
