@@ -14,7 +14,7 @@ curl -o .gitignore https://www.toptal.com/developers/gitignore/api/node
 
 ## Two ways to set up React with Storybook
 
-### 1 - Storybook
+### 1 - Storybook for components
 
 > This allows you to create a component library, and later add rollup to build it.
 
