@@ -16,8 +16,6 @@ git commit -m "Initial Commit"
 
 ## 2 Ways to set up React with Storybook
 
-<hr>
-
 ### 1 - Storybook
 
 > This allows you to create a component library, and later add rollup to build it.
