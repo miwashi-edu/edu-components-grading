@@ -10,8 +10,6 @@ cd components-grading
 git init
 echo '# components-grading' > README.md
 curl -o .gitignore https://raw.githubusercontent.com/toptal/gitignore/master/templates/Node.gitignore
-git add .
-git commit -m "Initial Commit"
 ```
 
 ## 2 Ways to set up React with Storybook
@@ -40,6 +38,8 @@ mkdir ./src/components
 ```bash
 npx storybook init --builder webpack5 --type react --skip-install # or --builder vite 
 rm -rf ./src/stories
+git add .
+git commit -m "Initial Commit"
 npm install
 npm run storybook
 ```
@@ -53,6 +53,9 @@ npm run storybook
 ```bash
 npm create vite@latest .
 npx storybook init
+# Quit Storybook
+git add .
+git commit -m "Initial Commit"
 ```
 
 <hr>
