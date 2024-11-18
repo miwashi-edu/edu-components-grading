@@ -54,6 +54,10 @@ npm run storybook
 npm create vite@latest .
 npx storybook init
 # Quit Storybook, it has started in onboarding mode
+rm -rf ./src/stories
+touch ./src/index.js
+npm pkg set main='./src/index.js' 
+mkdir ./src/components
 git add .
 git commit -m "Initial Commit"
 ```
