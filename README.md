@@ -14,7 +14,15 @@ git add .
 git commit -m "Initial Commit"
 ```
 
-## set up node package and react
+## 2 Ways to set up React with Storybook
+
+<hr>
+
+### 1 - Storybook
+
+> This allows you to create a component library, and later add rollup to build it.
+
+#### set up node package and react
 
 > Create an empty npm package
 
@@ -26,7 +34,7 @@ npm pkg set main='./src/index.js'
 mkdir ./src/components
 ```
 
-## Set up storybook
+#### Set up storybook
 
 > This will end in: `Couldn't find any stories in your Storybook.` as we have an empty storybook.
 > Next trail will add our first story.
@@ -38,9 +46,15 @@ npm install
 npm run storybook
 ```
 
-## För Lisette
+<hr>
+
+### 2 - React with Vite
+
+> This allows you to use Storybook to create an Application.
 
 ```bash
 npm create vite@latest .
 npx storybook init
 ```
+
+<hr>
