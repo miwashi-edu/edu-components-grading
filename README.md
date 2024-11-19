@@ -63,6 +63,7 @@ EOF
 
 ```bash
 cat > ./src/components/Drill/LanguageSwitcherAtom.jsx << 'EOF'
+import React from 'react';
 import styles from './Drill.module.css';
 
 const LanguageSwitcherAtom = ({ onLanguageChange }) => {
