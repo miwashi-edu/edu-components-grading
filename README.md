@@ -32,6 +32,8 @@ touch ./src/components/StructuralAdapter/StructuralAdapter.module.css
 touch ./src/components/StructuralAdapter/StructuralAdapter.styles.js
 touch ./src/components/StructuralAdapter/FlexGridStructure.jsx
 touch ./src/components/StructuralAdapter/Card.jsx
+touch ./src/components/StructuralAdapter/InfoBox.jsx
 touch ./src/components/StructuralAdapter/FlexGridStructure.stories.jsx
 touch ./src/components/StructuralAdapter/Card.stories.jsx
+touch ./src/components/StructuralAdapter/InfoBox.stories.jsx
 ```
