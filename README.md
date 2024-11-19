@@ -25,7 +25,7 @@ touch ./src/components/Drill/CardAtom.stories.jsx
 
 ```bash
 cat > ./src/components/Drill/index.js << 'EOF'
-import DrillMolecule from './DrillMolecule";
+import DrillMolecule from './DrillMolecule';
 export {DrillMolecule as Drill}
 EOF
 ```
