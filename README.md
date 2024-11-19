@@ -32,7 +32,6 @@ cd ~
 cd ws
 cd components-grading
 mkdir ./src/components/StructuralAdapter
-cd ./src/components/StructuralAdapter
 touch ./src/components/StructuralAdapter/index.js
 touch ./src/components/StructuralAdapter/StructuralAdapter.module.css
 touch ./src/components/StructuralAdapter/StructuralAdapter.styles.js
