@@ -9,7 +9,6 @@ cd ~
 cd ws
 cd components-grading
 mkdir ./src/components/Login
-cd ./src/components/Login
 touch ./src/components/Login/index.js
 touch ./src/components/Login/Login.module.css
 touch ./src/components/Login/Login.styles.js
