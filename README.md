@@ -9,16 +9,16 @@ cd ~
 cd ws
 cd components-grading
 mkdir ./src/components/Drill
-touch ./src/components/index.js
-touch ./src/components/Drill.module.css
-touch ./src/components/Drill.styles.js
-touch ./src/components/DrillMolecule.jsx
-touch ./src/components/LanguageSwitcherAtom.jsx
-touch ./src/components/CardAtom.jsx
-touch ./src/components/DrillMolecule.stories.jsx
-touch ./src/components/CardAtom.stories.jsx
-touch ./src/components/LanguageSwitcherAtom.stories.jsx
-touch ./src/components/CardAtom.stories.jsx
+touch ./src/components/Drill/index.js
+touch ./src/components/Drill/Drill.module.css
+touch ./src/components/Drill/Drill.styles.js
+touch ./src/components/Drill/DrillMolecule.jsx
+touch ./src/components/Drill/LanguageSwitcherAtom.jsx
+touch ./src/components/Drill/CardAtom.jsx
+touch ./src/components/Drill/DrillMolecule.stories.jsx
+touch ./src/components/Drill/CardAtom.stories.jsx
+touch ./src/components/Drill/LanguageSwitcherAtom.stories.jsx
+touch ./src/components/Drill/CardAtom.stories.jsx
 ```
 
 ### Barrel file <heredoc
