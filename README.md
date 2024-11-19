@@ -39,7 +39,7 @@ import LanguageSwitcherAtom from './LanguageSwitcherAtom';
 import CardAtom from './CardAtom';
 import styles from './Drill.module.css';
 
-const Drill = () => {
+const DrillMolecule = () => {
     const [language, setLanguage] = useState('en');  // State lifted to parent
 
     const handleLanguageSwitch = (newLanguage) => {
@@ -54,7 +54,7 @@ const Drill = () => {
     );
 };
 
-export default Drill;
+export default DrillMolecule;
 EOF
 ```
 
@@ -143,6 +143,16 @@ EOF
 
 ```bash
 cat > ./src/components/Drill/DrillMolecule.stories.jsx << 'EOF'
+import React from 'react';
+import {Drill} from './index';
+
+export default {
+    title: 'Drill/Drill',
+    component: Drill,
+};
+
+export const Default = {
+}
 EOF
 ```
 
