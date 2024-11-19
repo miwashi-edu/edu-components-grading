@@ -10,20 +10,17 @@ cd ws
 cd components-grading
 mkdir ./src/components/Login
 cd ./src/components/Login
-touch index.js
-touch Login.module.css
-touch Login.styles.js
-touch LoginMolecule.jsx
-touch UserAtom.jsx
-touch PasswordAtom.jsx
-touch LoginButtonAtom.jsx
-touch LoginMolecule.stories.jsx
-touch UserAtom.stories.jsx
-touch PasswordAtom.stories.jsx
-touch LoginButtonAtom.stories.jsx
-cd ..
-cd ..
-cd ..
+touch ./src/components/Login/index.js
+touch ./src/components/Login/Login.module.css
+touch ./src/components/Login/Login.styles.js
+touch ./src/components/Login/LoginMolecule.jsx
+touch ./src/components/Login/UserAtom.jsx
+touch ./src/components/Login/PasswordAtom.jsx
+touch ./src/components/Login/LoginButtonAtom.jsx
+touch ./src/components/Login/LoginMolecule.stories.jsx
+touch ./src/components/Login/UserAtom.stories.jsx
+touch ./src/components/Login/PasswordAtom.stories.jsx
+touch ./src/components/Login/LoginButtonAtom.stories.jsx
 ```
 
 ### Barrel file <heredoc
