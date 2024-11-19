@@ -34,6 +34,27 @@ EOF
 
 ```bash
 cat > ./src/components/Drill/DrillMolecule.jsx << 'EOF'
+import React, { useState } from 'react';
+import LanguageSwitcherAtom from './LanguageSwitcherAtom';
+import CardAtom from './CardAtom';
+import styles from './Drill.module.css';
+
+const Drill = () => {
+    const [language, setLanguage] = useState('en');  // State lifted to parent
+
+    const handleLanguageSwitch = (newLanguage) => {
+        setLanguage(newLanguage);
+    };
+
+    return (
+        <div className={styles.drillContainer}>
+            <LanguageSwitcherAtom onLanguageChange={handleLanguageSwitch} />
+            <CardAtom language={language} />
+        </div>
+    );
+};
+
+export default Drill;
 EOF
 ```
 
@@ -42,6 +63,26 @@ EOF
 
 ```bash
 cat > ./src/components/Drill/LanguageSwitcherAtom.jsx << 'EOF'
+import styles from './Drill.module.css';
+
+const LanguageSwitcherAtom = ({ onLanguageChange }) => {
+    const handleLanguageSelect = (e) => {
+        onLanguageChange(e.target.value);
+    };
+
+    return (
+        <div className={styles.switcher}>
+            <label>Select Language: </label>
+            <select onChange={handleLanguageSelect}>
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+            </select>
+        </div>
+    );
+};
+
+export default LanguageSwitcherAtom;
 EOF
 ```
 
@@ -50,6 +91,24 @@ EOF
 
 ```bash
 cat > ./src/components/Drill/CardAtom.jsx << 'EOF'
+import React from 'react';
+import styles from './Drill.module.css';
+
+const CardAtom = ({ language }) => {
+    const messages = {
+        en: 'Hello!',
+        fr: 'Bonjour!',
+        es: '¡Hola!'
+    };
+
+    return (
+        <div className={styles.card}>
+            <p>{messages[language]}</p>
+        </div>
+    );
+};
+
+export default CardAtom;
 EOF
 ```
 
