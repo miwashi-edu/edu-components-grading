@@ -71,6 +71,34 @@ EOF
  
 ```bash
 cat > ./src/components/StructuralAdapter/FlexBoxStructure.jsx << 'EOF'
+import React from 'react';
+import styles from './StructuralAdapter.module.css';
+
+const FlexBoxStructure = ({ config, data, children }) => {
+    if (!data || data.length === 0) return <div>No data provided</div>;
+    const { direction = 'column', justify = 'flex-start', align = 'center', wrap = 'nowrap', gap = '0px' } = config;
+
+    return (
+        <ul className={styles.flexContainer} style={{
+            display: 'flex',
+            flexDirection: direction,
+            justifyContent: justify,
+            alignItems: align,
+            flexWrap: wrap,
+            gap: gap,
+            padding: 0,
+            listStyleType: 'none'
+        }}>
+            {data.map((item, index) => (
+                <li key={index} className={styles.flexItem}>
+                    {React.cloneElement(children, { ...item })}
+                </li>
+            ))}
+        </ul>
+    );
+};
+
+export default FlexBoxStructure;
 EOF
 ```
 
@@ -78,6 +106,37 @@ EOF
 
 ```bash
 cat > ./src/components/StructuralAdapter/FlexBoxStructure.stories.jsx << 'EOF'
+import React from 'react';
+import FlexBoxStructure from './FlexBoxStructure';
+import Card from './Card';
+import DirectoryInfo from './DirectoryInfo';
+import InfoBox from "./InfoBox";
+import providedCardData from './flexboxCardData.json';
+import providedDirectoryData from './flexboxDirectoryData.json';
+import providedInfoData from './flexboxInfoData.json';
+
+export default {
+    title: 'StructuralAdapter/FlexBoxStructure',
+    component: FlexBoxStructure,
+};
+
+const config = {direction: 'row', justify: 'space-around', align: 'center', wrap: 'wrap', gap: '15px'};
+
+export const Default = {
+    args: {config: config, data: providedCardData, children: <Card />,}
+};
+
+export const WithDirectoryInfo = {
+    args: {
+        config: config, data: providedDirectoryData, children: <DirectoryInfo />,
+    }
+};
+
+export const WithInfoBox = {
+    args: {
+        config: config, data: providedInfoData, children: <InfoBox />,
+    }
+};
 EOF
 ```
 
