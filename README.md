@@ -45,6 +45,12 @@ touch ./src/components/StructuralAdapter/RecursiveStructure.stories.jsx
 touch ./src/components/StructuralAdapter/Card.stories.jsx
 touch ./src/components/StructuralAdapter/InfoBox.stories.jsx
 touch ./src/components/StructuralAdapter/DirectoryInfo.stories.jsx
+touch ./src/components/StructuralAdapter/recursiveDirectoryData.json
+touch ./src/components/StructuralAdapter/recursiveNodeData.json
+touch ./src/components/StructuralAdapter/flexboxDirectoryData.json
+touch ./src/components/StructuralAdapter/flexboxCardData.json
+touch ./src/components/StructuralAdapter/flexboxInfoData.json
+touch ./src/components/StructuralAdapter/
 ```
 
 ### Structural Adapters
