@@ -46,3 +46,84 @@ touch ./src/components/StructuralAdapter/Card.stories.jsx
 touch ./src/components/StructuralAdapter/InfoBox.stories.jsx
 touch ./src/components/StructuralAdapter/DirectoryInfo.stories.jsx
 ```
+
+### Structural Adapters
+
+#### FlexGridStructure
+
+##### Component
+ 
+```bash
+cat > ./src/components/StructuralAdapter/FlexGridStructure.jsx << 'EOF'
+EOF
+```
+
+##### Story
+
+```bash
+cat > ./src/components/StructuralAdapter/FlexGridStructure.stories.jsx << 'EOF'
+EOF
+```
+
+#### FlexBoxStructure
+
+##### Component
+ 
+```bash
+cat > ./src/components/StructuralAdapter/FlexBoxStructure.jsx << 'EOF'
+EOF
+```
+
+##### Story
+
+```bash
+cat > ./src/components/StructuralAdapter/FlexBoxStructure.stories.jsx << 'EOF'
+EOF
+```
+
+#### RecursiveStructure
+
+##### Component
+ 
+```bash
+cat > ./src/components/StructuralAdapter/RecursiveStructure.jsx << 'EOF'
+import React from 'react';
+import styles from './StructuralAdapter.module.css';
+
+const RecursiveStructure = ({ node, children, depth = 0 }) => {
+    if (!node) return <>Missing data</>;
+    const isRecursive = Array.isArray(node.nodes);
+    const baseMultiplier = 10 ** depth;
+    const { nodes, ...nodeProps } = node;
+
+    return (
+        <div className={styles.nodeContainer}>
+            {children ? React.Children.map(children, (child) =>
+                React.cloneElement(child, { ...nodeProps })
+            ) : <div>Missing node tag</div>}
+            {isRecursive && (
+                <ul>
+                    {node.nodes.map((child, index) => (
+                        <li key={index * baseMultiplier + 1} className={styles.nodeItem}>
+                            <RecursiveStructure node={child} depth={depth + 1}>
+                                {children}
+                            </RecursiveStructure>
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </div>
+    );
+};
+
+export default RecursiveStructure;
+EOF
+```
+
+##### Story
+
+```bash
+cat > ./src/components/StructuralAdapter/FlexGridStructure.stories.jsx << 'EOF'
+
+EOF
+```
