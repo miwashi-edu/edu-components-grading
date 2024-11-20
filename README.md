@@ -25,7 +25,7 @@
 </RecursiveStructure>
 ```
 
-### Scaffold Login component
+### Scaffold Structural Adapters module
 
 ```bash
 cd ~
