@@ -100,7 +100,7 @@ const RecursiveStructure = ({ node, children, depth = 0 }) => {
         <div className={styles.nodeContainer}>
             {children ? React.Children.map(children, (child) =>
                 React.cloneElement(child, { ...nodeProps })
-            ) : <div>Missing node tag</div>}
+            ) : <div>{depth} Missing child tag</div>}
             {isRecursive && (
                 <ul>
                     {node.nodes.map((child, index) => (
@@ -123,7 +123,33 @@ EOF
 ##### Story
 
 ```bash
-cat > ./src/components/StructuralAdapter/FlexGridStructure.stories.jsx << 'EOF'
+cat > ./src/components/StructuralAdapter/RecursiveStructure.stories.jsx << 'EOF'
+import React from 'react';
+import RecursiveStructure from "./RecursiveStructure.jsx";
+import Node from "./Node";
+import DirectoryInfo from "./DirectoryInfo";
+import providedDirectoryData from './directoryData.json';
+import providedNodeData from './nodeData.json';
 
+export default {
+    title: "StructuralAdapter/RecursiveStructure",
+    component: RecursiveStructure,
+}
+
+export const Default = {
+    args: {node: providedNodeData, children: <Node/>}
+}
+
+export const WithDirectoryInfo = {
+    args: {node: providedDirectoryData, children: <DirectoryInfo/>}
+}
+
+export const MissingData = {
+    args: {children: <DirectoryInfo/>}
+}
+
+export const MissingChild = {
+    args: {node: providedNodeData}
+}
 EOF
 ```
