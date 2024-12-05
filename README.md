@@ -68,7 +68,7 @@ EOF
 
 ```bash
 cat > ./src/index.js << 'EOF'
-import Sample from './components/Sample";
+import {Sample} from './components/Sample";
 export {Sample}
 EOF
 ```
