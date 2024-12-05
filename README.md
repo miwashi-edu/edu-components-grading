@@ -60,8 +60,6 @@ EOF
 ```bash
 cat > ./src/components/Sample/index.js << 'EOF'
 import Sample from './Sample";
-är samma som
-import Sample from './components/Sample.jsx";
 export {Sample}
 EOF
 ```
@@ -71,8 +69,6 @@ EOF
 ```bash
 cat > ./src/index.js << 'EOF'
 import Sample from './components/Sample";
-är samma som
-import Sample from './components/Sample/index.js";
 export {Sample}
 EOF
 ```
