@@ -42,7 +42,7 @@ EOF
 
 #### 🦶 Storybook <heredoc
 
-> ``Component Story Format` (`CSF`)
+> [`Component Story Format`](https://storybook.js.org/docs/api/csf) (`CSF`)
 
 ```bash
 cat > ./src/components/Sample/Sample.stories.jsx << 'EOF'
