@@ -1,28 +1,30 @@
-# edu-components-grading
+# 💡 edu-components-grading
 
-## set up Component + Story
+## 👣 set up Component + Story
 
-> Create a Sample Component together with Story.
-> Tools `bash + vim`
+> This tutorial will scaffold a Sample Component together with Story.  
+> Tools [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org)  
+> ![Tree diagram](./resources/tree.png)
+>  
+> ⚠️ **Notice**: You can use the `heredoc!` first time, but for grading you need to type it using Vim!`
+
+### 📚 Instructions
+
+#### 🦶 Scaffold Project
 
 ```bash
 cd ~
 cd ws
-mkdir components-grading
 cd components-grading
 mkdir -p ./src/components/Sample
-cd ./src/components/Sample
-touch index.js
-touch Sample.jsx
-touch Sample.module.css
-touch Sample.styles.js
-touch Sample.stories.jsx
-cd ..
-cd ..
-cd ..
+touch ./src/components/index.js
+touch ./src/components/Sample.jsx
+touch ./src/components/Sample.module.css
+touch ./src/components/Sample.styles.js
+touch ./src/components/Sample.stories.jsx
 ```
 
-## Component <heredoc
+#### 🦶 Component <heredoc
 
 ```bash
 cat > ./src/components/Sample/Sample.jsx << 'EOF'
@@ -38,7 +40,9 @@ export default Sample;
 EOF
 ```
 
-## Storybook <heredoc
+#### 🦶 Storybook <heredoc
+
+> ``Component Story Format` (`CSF`)
 
 ```bash
 cat > ./src/components/Sample/Sample.stories.jsx << 'EOF'
@@ -55,20 +59,62 @@ export const Default = {
 EOF
 ```
 
-## Barrel File <heredoc
+#### 🦶 Barrel File <heredoc
 
 ```bash
 cat > ./src/components/Sample/index.js << 'EOF'
-import Sample from './Sample";
-export {Sample}
+export {default as Sample} from './Sample";
 EOF
 ```
 
-## Add component to package barrel file <heredoc
+#### 🦶 Add help bundler find file from components, and src
 
 ```bash
+cat > ./src/components/index.js << 'EOF'
+export {Sample} from './components/Sample";
+
 cat > ./src/index.js << 'EOF'
-import {Sample} from './components/Sample";
-export {Sample}
+export {Sample} from './components";
 EOF
+```
+
+#### ▶️ Try it
+
+```
+npm run storybook
+```
+
+
+#### 🔄 Repeat trail
+
+```bash
+git reset --hard
+git clean -df
+```
+
+#### ✅ End trail
+
+```bash
+git add .
+git commit -m "Sample component done"
+```
+
+---
+---
+
+# 📋 You can clone and run this Tutorial from here
+
+> ⚠️ **Warning**: This part is only if you start from here.
+
+```bash
+cd ~
+[ -d ws ] && cd ws || { echo -e '\033[1;31mcreate workspace first!\033[0m'; return 1; }
+rm -rf components-grading
+git clone --single-branch --branch 1-Yellow https://github.com/miwashi-edu/edu-components-grading.git components-grading
+cd components-grading
+rm -rf .git # Remove history
+git init
+git add .
+git commit -m "Initial Commit"
+npm install
 ```
