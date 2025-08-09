@@ -17,11 +17,11 @@ cd ~
 cd ws
 cd components-grading
 mkdir -p ./src/components/Sample
-touch ./src/components/index.js
-touch ./src/components/Sample.jsx
-touch ./src/components/Sample.module.css
-touch ./src/components/Sample.styles.js
-touch ./src/components/Sample.stories.jsx
+touch ./src/components/Sample/index.js
+touch ./src/components/Sample/Sample.jsx
+touch ./src/components/Sample/Sample.module.css
+touch ./src/components/Sample/Sample.styles.js
+touch ./src/components/Sample/Sample.stories.jsx
 ```
 
 #### 🦶 Component <heredoc
