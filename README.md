@@ -129,12 +129,37 @@ git commit -m "Prepared Application development"
 
 #### 📚 Instructions
 
+##### 🦶 Scaffold
 ```bash
 cd ~
 cd ws
 cd components-grading
-npx storybook@latest init --builder vite --type react
+npx storybook@latest init --builder vite --type react --skip-install
 # Recommended: Component dev, docs, test
+```
+
+##### 🦶 Clean
+
+```bash
+rm -rf ./src/stories
+mkdir ./src/components
+```
+
+##### Create an info page for storybook.
+
+```bash
+cat > ./src/info.mdx << 'EOF'
+# Welcome to components-grading
+
+## White belt
+## Yellow belt
+## Orange belt
+## Green belt
+## Blue belt
+## Black belt - first dan
+## Black belt - second dan
+## Black belt - third dan
+EOF
 ```
 
 #### ▶️ Try it
