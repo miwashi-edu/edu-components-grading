@@ -1,15 +1,32 @@
 # edu-components-grading
 
-## set up project
+> This tutorial will set up a **[React](https://react.dev)** project with [Vite](https://vite.dev)
+> for component and application developmment.  
+> 
+> When this tutorial is run you can start component development with `npm run storybook`.
+> 
+> It prepares the project, it prepares a REDME, and it prepares git for studying.
+> The tutorial is locked in at **Vite** with **vanilla javascript**. As vite uses Rollup,
+> it is also locked in using **[Rollup](https://rollupjs.org)**.
+
+## Prepare
+
+1. Understand bash commands like `rm` and `rm -rf` **important**
+2. Create a workspace `cd ~ && mkdir ws && cd ws`' (if missing)
+2. Register at [npmjs](https://www.npmjs.com/signup)
+3. from **npmjs.com** you get a `username`, like @miwashi
+4. prepare a name for your library like @wiwashi/components-grading
+
+## Instructions
 
 ```bash
 cd ~
 cd ws
-mkdir components-grading
+rm components-grading || mkdir components-grading
 cd components-grading
+curl -o .gitignore https://www.toptal.com/developers/gitignore/api/node
 git init
 echo '# components-grading' > README.md
-curl -o .gitignore https://www.toptal.com/developers/gitignore/api/node
 ```
 
 ## Two ways to set up React with Storybook
