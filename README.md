@@ -30,7 +30,8 @@ cd components-grading
 curl -o .gitignore https://www.toptal.com/developers/gitignore/api/node
 git init
 echo '# components-grading' > README.md
-git commit -am "Initial Commit"
+git add .
+git commit -m "Initial Commit"
 ```
 
 ## Two ways to set up React with Storybook
