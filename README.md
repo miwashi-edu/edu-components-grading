@@ -116,7 +116,7 @@ git commit -m "Prepared Application development"
 
 ### 👣 Initialize component development
 
-#### 🦶 Instructions
+#### 📚 Instructions
 
 ```bash
 cd ~
