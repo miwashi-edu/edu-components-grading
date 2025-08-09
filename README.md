@@ -3,10 +3,11 @@
 ## 👣 set up Component + Story
 
 > This tutorial will scaffold a Sample Component together with Story.  
-> Tools [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org)  
+> To achieve the grade of yellow belt you need to complete this task in 4 minutes using only [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org). No copy paste i allowed!
+>   
 > ![Tree diagram](./resources/tree.png)
 >  
-> ⚠️ **Notice**: You can use the `heredoc!` first time, but for grading you need to type it using Vim!`
+> ⚠️ **Notice**: You can use the `heredoc!` first time, but for grading you need to type it using Vim!
 
 ### 📚 Instructions
 
@@ -46,8 +47,8 @@ EOF
 
 ```bash
 cat > ./src/components/Sample/Sample.stories.jsx << 'EOF'
-import React from 'react';
-import Sample from './Sample';
+import {React} from 'react';
+import Sample from '.';
 
 export default {
   title: 'Components/Sample',
