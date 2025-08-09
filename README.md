@@ -1,4 +1,4 @@
-# edu-components-grading
+# 💡 edu-components-grading
 
 > This tutorial will set up a **[React](https://react.dev)** project with [Vite](https://vite.dev)
 > for component and application developmment.  
@@ -9,7 +9,7 @@
 > The tutorial is locked in at **Vite** with **vanilla javascript**. As vite uses Rollup,
 > it is also locked in using **[Rollup](https://rollupjs.org)**.
 
-## Prepare
+## 📋 Prepare
 
 1. Understand bash commands like `rm` and `rm -rf` **important**
 2. Create a workspace `cd ~ && mkdir ws && cd ws`' (if missing)
@@ -17,12 +17,12 @@
 3. from **npmjs.com** you get a `username`, like @miwashi
 4. prepare a name for your library like @wiwashi/components-grading
 
-## Instructions
+## 📚 Instructions
 
 > ⚠️ **Notice**: the `cd ws` is made complicated for copy/paste protection.
 > Simplify it using only `cd ws`.
 
-### Scaffold Project
+### 👣 Scaffold Project
 
 ```bash
 cd ~
@@ -38,11 +38,11 @@ git commit -m "Initial Commit"
 
 ---
 
-### Initialize application development
+### 👣 Initialize application development
 
 > This will allow you to run `npm run dev` and `npm run build`!
 
-#### Instructions
+#### 📚 Instructions
 
 ```bash
 npm create vite@latest . -- --template react
@@ -85,21 +85,21 @@ EOF
 npm install
 ```
 
-#### Try it
+#### ▶️ Try it
 
 ```
 npm run dev
 # Press o and enter when vite is running.
 ```
 
-#### Repeat trail
+#### 🔄 Repeat trail
 
 ```bash
 git reset --hard
 git clean -df
 ```
 
-#### End trail
+#### ✅ End trail
 
 ```bash
 git add .
@@ -108,29 +108,29 @@ git commit -m "Prepared Application development"
 
 ---
 
-### Initialize component development
+### 👣 Initialize component development
 
-#### Instructions
+#### 🦶 Instructions
 
 ```bash
 npx storybook@latest init --builder vite --use-npm --no-telemetry --no-install 
 ```
 
-#### Try it
+#### ▶️ Try it
 
 ```
 npm run storybook
 ```
 
 
-#### Repeat trail
+#### 🔄 Repeat trail
 
 ```bash
 git reset --hard
 git clean -df
 ```
 
-#### End trail
+#### ✅ End trail
 
 ```bash
 git add .
