@@ -99,10 +99,49 @@ git add .
 git commit -m "Sample component done"
 ```
 
+## Bonus (not part of tutorial)
+
+```bash
+cat > ./src/info.mdx <<
+# Welcome to components-grading
+## Yellow belt
+
+On this level, we will learn to scaffold a component.
+
+A software component is a modular unit of software that encapsulates specific functionality. The desired characteristics of a component are reusability and maintainability.
+By treating the component as a small system, we can make it robust, long-living, and reusable.
+
+
+![Tree diagram](./resources/tree.png)
+
+### File List:
+
+- **index.js**
+: It helps the bundler locate and load your components.
+
+- **Component.mdx**
+: The documentation file, which should describe the component’s functionality and usage.
+
+- **Component.jsx**
+: The component file, which should have a single responsibility and export the component by default for the bundler to locate.
+
+- **Component.module.css**
+: It is scoped to the component and uses its own namespace, preventing CSS collision.
+
+- **Component.styles.js**
+: It contains dynamic styles, *CSS-in-JS* and, while slower than .css, can offer more flexibility. It is typically used less frequently, but the file must exist for quality even when not used.
+
+- **Component.stories.js**
+: It contains test stories for your component, designed to test its robustness. If the component passes all tests without issues, it has succeeded.
+
+**To grade yourself `Yellow Belt`, you should complete this task in 5 minutes using only Vim and a terminal.**. Grading must be performed before a `black belt`.
+EOF
+```
+
 ---
 ---
 
-# 📋 You can clone and run this Tutorial from here
+## 📋 You can clone and run this Tutorial from here
 
 > ⚠️ **Warning**: This part is only if you start from here.
 
