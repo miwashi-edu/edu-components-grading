@@ -49,6 +49,8 @@ echo -n > ./src/index.css
 rm ./src/App.css
 rm -rf ./src/assets
 rm ./public/vite.svg
+# Replace with favicon of your own choice
+curl -L https://raw.githubusercontent.com/miwashi-edu/edu-components-grading/main/resources/favicon.svg -o ./public/favicon.svg
 
 cat > ./src/App.jsx << 'EOF'
 function App() {
@@ -58,7 +60,25 @@ function App() {
 }
 export default App
 EOF
-# 
+
+cat > ./src/index.html << 'EOF'
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>components-grading</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+EOF
+ 
 git add .
 git commit -m "Prepared Application development"
 ```
