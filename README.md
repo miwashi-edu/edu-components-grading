@@ -69,7 +69,7 @@ npm install
 cat > ./src/App.jsx << 'EOF'
 function App() {
   return (
-    <div>edu-storybook</div>
+    <div>components-grading</div>
   )
 }
 export default App
