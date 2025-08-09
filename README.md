@@ -28,7 +28,7 @@ touch ./src/components/Styled/Styled.styles.js
 touch ./src/components/Styled/Styled.stories.jsx
 ```
 
-#### 🦶 Component <heredoc
+#### 🦶 Component
 
 ```bash
 cat > ./src/components/Styled/Styled.jsx << 'EOF'
@@ -58,15 +58,25 @@ export default Styled;
 EOF
 ```
 
-#### 🦶 Barrel file <heredoc
+#### 🦶 Barrel files
 
 ```bash
 cat > ./src/components/Styled/index.js << 'EOF'
-export {default as Sample} from './Sample';
+export {default as Styled} from './Styled';
 EOF
+
+cat >> ./src/components/index.js << 'EOF'
+export {Styled} from './Styled';
+EOF
+
+cat >> ./src/index.js << 'EOF'
+export {Styled} from './components';
+EOF
+
 ```
 
 #### 🦶 Storybook <heredoc
+> Here we learn to write many stories to try to break Styled component.
 
 ```bash
 cat > ./src/components/Styled/Styled.stories.jsx << 'EOF'
@@ -100,9 +110,9 @@ export const InvalidProp = {
 EOF
 ```
 
-#### 🦶 Module CSS <heredoc
+#### 🦶 Module CSS
 
-⚠️ **Notice**: You can use the `heredoc!`!
+⚠️ **Notice**: You can use the `heredoc` CSS is not part of tutorial!
 
 ```bash
 cat > ./src/components/Styled/Styled.module.css << 'EOF'
@@ -130,9 +140,7 @@ cat > ./src/components/Styled/Styled.module.css << 'EOF'
 EOF
 ```
 
-#### 🦶 CSS-in-JS <heredoc
-
-⚠️ **Notice**: The purpose here is to use simple css and learn the ternary operator!
+#### 🦶 CSS-in-JS
 
 ```bash
 cat > ./src/components/Styled/Styled.styles.js << 'EOF'
