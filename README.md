@@ -36,6 +36,8 @@ git add .
 git commit -m "Initial Commit"
 ```
 
+--
+
 ### Initialize application development
 
 > This will allow you to run `npm run dev` and `npm run build`!
@@ -103,6 +105,8 @@ git clean -df
 git add .
 git commit -m "Prepared Application development"
 ```
+
+--
 
 ### Initialize component development
 
