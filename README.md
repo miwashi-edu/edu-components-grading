@@ -2,7 +2,7 @@
 
 ## 👣 set up Component + Story + Styles
 
-> This tutorial will scaffold a Styled Component together with Story, and style it. The purpose is to learn to always add module css, and CSS-inJS to evry component.  
+> This tutorial will scaffold a Styled Component together with Story, and style it. The purpose is to learn to always add module css, and CSS-inJS to every component.  
 > To achieve the grade of yellow belt you need to complete this task in 4 minutes using only [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org).
 > No copy paste i allowed!
 > Grading must be performed before a `black belt`.
