@@ -36,7 +36,7 @@ git add .
 git commit -m "Initial Commit"
 ```
 
---
+---
 
 ### Initialize application development
 
@@ -106,7 +106,7 @@ git add .
 git commit -m "Prepared Application development"
 ```
 
---
+---
 
 ### Initialize component development
 
