@@ -145,6 +145,8 @@ export const dynamicStyles = (fontSize) => ({
     },
 });
 EOF
+```
+
 
 ---
 ---
