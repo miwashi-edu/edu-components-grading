@@ -44,6 +44,8 @@ git commit -m "Initial Commit"
 
 #### 📚 Instructions
 
+##### 🦶 Scaffold project
+
 ```bash
 cd ~
 cd ws
@@ -58,7 +60,12 @@ rm -rf ./src/assets
 rm ./public/vite.svg
 # Replace with favicon of your own choice
 curl -L https://raw.githubusercontent.com/miwashi-edu/edu-components-grading/main/resources/favicon.svg -o ./public/favicon.svg
+npm install
+```
 
+##### 🦶 Create new App.jsx
+
+```bash
 cat > ./src/App.jsx << 'EOF'
 function App() {
   return (
@@ -67,7 +74,11 @@ function App() {
 }
 export default App
 EOF
+```
 
+##### 🦶 Create new index.html
+
+```bash
 cat > ./index.html << 'EOF'
 <!doctype html>
 <html lang="en">
@@ -85,8 +96,8 @@ cat > ./index.html << 'EOF'
   </body>
 </html>
 EOF
-npm install
 ```
+
 
 #### ▶️ Try it
 
