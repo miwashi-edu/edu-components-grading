@@ -19,9 +19,12 @@
 
 ## Instructions
 
+> ⚠️ **Notice**: the `cd ws` is made complicated for copy/paste protection.
+> Simplify it using only `cd ws`.
+
 ```bash
 cd ~
-[ -d ws ] && cd ws || { echo 'create workspace first!'; return 1; }
+[ -d ws ] && cd ws || { echo -e '\033[1;31mcreate workspace first!\033[0m'; return 1; }
 rm -rf components-grading; mkdir -p components-grading
 cd components-grading
 curl -o .gitignore https://www.toptal.com/developers/gitignore/api/node
