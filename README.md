@@ -80,6 +80,7 @@ cat > ./index.html << 'EOF'
   </body>
 </html>
 EOF
+npm install
 ```
 
 #### Try it
