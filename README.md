@@ -101,6 +101,8 @@ git clean -df
 git add .
 git commit -m "Sample component done"
 ```
+---
+---
 
 ## Bonus (not part of tutorial)
 
