@@ -78,8 +78,6 @@ EOF
 
 ##### 🦶 Create new index.html
 
-> ⚠️ **Notice**: Needed as Storybook crashes without stories.
-
 ```bash
 cat > ./index.html << 'EOF'
 <!doctype html>
@@ -148,6 +146,8 @@ mkdir ./src/components
 ```
 
 ##### Create an info page for storybook.
+
+> ⚠️ **Notice**: Needed as Storybook crashes without stories.
 
 ```bash
 cat > ./src/info.mdx << 'EOF'
