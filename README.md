@@ -109,7 +109,7 @@ git commit -m "Prepared Application development"
 #### Instructions
 
 ```bash
-npx storybook init --builder vite --use-npm --no-telemetry --no-install 
+npx storybook@latest init --builder vite --use-npm --no-telemetry --no-install 
 ```
 
 #### Try it
