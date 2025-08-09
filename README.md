@@ -89,7 +89,7 @@ npm run dev
 # Press o and enter when vite is running.
 ```
 
-#### Repeaat
+#### Repeat trail
 
 ```bash
 git reset --hard
@@ -118,7 +118,7 @@ npm run storybook
 ```
 
 
-#### Repeaat
+#### Repeat trail
 
 ```bash
 git reset --hard
