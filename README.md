@@ -82,6 +82,13 @@ cat > ./index.html << 'EOF'
 EOF
 ```
 
+#### Try it
+
+```
+npm run dev
+# Press o and enter when vite is running.
+```
+
 #### Repeaat
 
 ```bash
@@ -103,6 +110,13 @@ git commit -m "Prepared Application development"
 ```bash
 npx storybook init --builder vite --use-npm --no-telemetry --no-install 
 ```
+
+#### Try it
+
+```
+npm run storybook
+```
+
 
 #### Repeaat
 
