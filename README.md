@@ -137,7 +137,7 @@ By treating the component as a small system, we can make it robust, long-living,
 - **Component.stories.js**
 : It contains test stories for your component, designed to test its robustness. If the component passes all tests without issues, it has succeeded.
 
-**To grade yourself `Yellow Belt`, you should complete this task in 5 minutes using only Vim and a terminal.**. Grading must be performed before a `black belt`.
+**To grade yourself `Yellow Belt`, you should complete this task in 4 minutes using only Vim and a terminal.**. Grading must be performed before a `black belt`.
 EOF
 ```
 
