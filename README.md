@@ -21,7 +21,7 @@
 
 ```bash
 cd ~
-[ -d ws ] && cd ws || { echo "create workspace first!"; exit 1; }
+[ -d ws ] && cd ws || { echo 'create workspace first!'; exit 1; }
 rm -rf components-grading || mkdir components-grading
 cd components-grading
 curl -o .gitignore https://www.toptal.com/developers/gitignore/api/node
