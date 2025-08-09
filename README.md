@@ -48,7 +48,7 @@ const Styled = ({ text, fontSize }) => {
   return (
       <div className={styles.StyledContainer}>
         <div className={styles.StyledText} style={dynamicStyle.dynamicText}>
-          CSS Module + CSS-in-JS Styled: {text}
+          Styled: {text}
         </div>
       </div>
   );
@@ -58,26 +58,26 @@ export default Styled;
 EOF
 ```
 
+#### 🦶 Barrel file <heredoc
+
+```bash
+cat > ./src/components/Styled/index.js << 'EOF'
+export {default as Sample} from './Sample';
+EOF
+```
+
 #### 🦶 Storybook <heredoc
 
 ```bash
 cat > ./src/components/Styled/Styled.stories.jsx << 'EOF'
 import React from 'react';
-import Styled from './Styled';
+import {Styled} from '.';
 
 export default {
   title: 'Components/Styled',
   component: Styled,
-  parameters: {
-    docs: {
-      description: {
-        component: 'This component uses a combination of CSS Modules for core styling and CSS-in-JS for dynamic styling based on props.',
-      },
-    },
-  },
 };
 
-// Story: Default with valid prop
 export const Default = {
   args: {
     text: "Hello, Storybook!",
@@ -85,7 +85,6 @@ export const Default = {
   },
 };
 
-// Story: Large font size to test dynamic styling
 export const LargeText = {
   args: {
     text: "Large Font Text",
@@ -93,10 +92,9 @@ export const LargeText = {
   },
 };
 
-// Story: Invalid prop to trigger guard
 export const InvalidProp = {
   args: {
-    text: 123, // Invalid type to trigger error handling
+    text: 123,
   },
 };
 EOF
