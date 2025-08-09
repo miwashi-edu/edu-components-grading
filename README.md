@@ -155,28 +155,7 @@ cat > ./src/info.mdx << 'EOF'
 
 ## White belt
 On this level, we will set up the basic foundation for component development.
-
-## Yellow belt
-...
-
-## Orange belt
-...
-
-## Green belt
-...
-
-## Blue belt
-...
-
-## Black belt - first dan
-...
-
-## Black belt - second dan
-...
-
-## Black belt - third dan
 EOF
-
 ```
 
 #### ▶️ Try it
