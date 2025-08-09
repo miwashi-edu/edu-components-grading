@@ -22,6 +22,8 @@
 > ⚠️ **Notice**: the `cd ws` is made complicated for copy/paste protection.
 > Simplify it using only `cd ws`.
 
+### Scaffold Project
+
 ```bash
 cd ~
 [ -d ws ] && cd ws || { echo -e '\033[1;31mcreate workspace first!\033[0m'; return 1; }
@@ -34,36 +36,40 @@ git add .
 git commit -m "Initial Commit"
 ```
 
-## Two ways to set up React with Storybook
+### Initialize application development
 
-### 1 - Storybook for components
-
-> This allows you to create a component library, and later add rollup to build it.
-
-#### set up node package and react
-
-> Create an empty npm package
+> This will allow you to run `npm run dev` and `npm run build`!
 
 ```bash
-npm init -y
-mkdir src
-touch ./src/index.js
-npm pkg set main='./src/index.js' 
-mkdir ./src/components
+npm create vite@latest . -- --template react
+# Ignore files and continue
+
+echo "# components-grading" > README.md
+echo -n > ./src/index.css
+rm ./src/App.css
+rm -rf ./src/assets
+rm ./public/vite.svg
+
+cat > ./src/App.jsx << 'EOF'
+function App() {
+  return (
+    <div>edu-storybook</div>
+  )
+}
+export default App
+EOF
+# 
+git add .
+git commit -m "Prepared Application development"
 ```
 
-#### Set up storybook
-
-> This will end in: `Couldn't find any stories in your Storybook.` as we have an empty storybook.
-> Next trail will add our first story.
+### Initialize component development
 
 ```bash
-npx storybook init --builder webpack5 --type react --skip-install # or --builder vite 
-rm -rf ./src/stories
+npx storybook init --builder vite --use-npm --no-telemetry --no-install 
+
 git add .
-git commit -m "Initial Commit"
-npm install
-npm run storybook
+git commit -m "Prepared Component development"
 ```
 
 <hr>
@@ -71,18 +77,3 @@ npm run storybook
 ### 2 - React with Vite
 
 > This allows you to use Storybook to create an Application.
-
-```bash
-npm create vite@latest .
-npx storybook init
-# Quit Storybook, it has started in onboarding mode
-rm -rf ./src/stories
-rm -rf ./src/assets
-touch ./src/index.js
-npm pkg set main='./src/index.js' 
-mkdir ./src/components
-git add .
-git commit -m "Initial Commit"
-```
-
-<hr>
