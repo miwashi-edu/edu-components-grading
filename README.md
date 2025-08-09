@@ -17,12 +17,12 @@
 3. from **npmjs.com** you get a `username`, like @miwashi
 4. prepare a name for your library like @wiwashi/components-grading
 
-## 📚 Instructions
+### 👣 Scaffold Project
+
+#### 📚 Instructions
 
 > ⚠️ **Notice**: the `cd ws` is made complicated for copy/paste protection.
 > Simplify it using only `cd ws`.
-
-### 👣 Scaffold Project
 
 ```bash
 cd ~
@@ -45,6 +45,9 @@ git commit -m "Initial Commit"
 #### 📚 Instructions
 
 ```bash
+cd ~
+cd ws
+cd components-grading
 npm create vite@latest . -- --template react
 # Ignore files and continue
 
@@ -88,6 +91,9 @@ npm install
 #### ▶️ Try it
 
 ```
+cd ~
+cd ws
+cd components-grading
 npm run dev
 # Press o and enter when vite is running.
 ```
@@ -113,6 +119,9 @@ git commit -m "Prepared Application development"
 #### 🦶 Instructions
 
 ```bash
+cd ~
+cd ws
+cd components-grading
 npx storybook@latest init --builder vite --use-npm --no-telemetry --no-install 
 ```
 
