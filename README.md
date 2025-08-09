@@ -133,7 +133,8 @@ git commit -m "Prepared Application development"
 cd ~
 cd ws
 cd components-grading
-npx storybook@latest init --builder vite --use-npm --no-telemetry --no-install 
+npx storybook@latest init --builder vite --type react
+# Recommended: Component dev, docs, test
 ```
 
 #### ▶️ Try it
