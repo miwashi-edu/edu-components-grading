@@ -78,6 +78,8 @@ EOF
 
 ##### 🦶 Create new index.html
 
+> ⚠️ **Notice**: Needed as Storybook crashes without stories.
+
 ```bash
 cat > ./index.html << 'EOF'
 <!doctype html>
@@ -152,19 +154,35 @@ cat > ./src/info.mdx << 'EOF'
 # Welcome to components-grading
 
 ## White belt
+On this level, we will set up the basic foundation for component development.
+
 ## Yellow belt
+...
+
 ## Orange belt
+...
+
 ## Green belt
+...
+
 ## Blue belt
+...
+
 ## Black belt - first dan
+...
+
 ## Black belt - second dan
+...
+
 ## Black belt - third dan
 EOF
+
 ```
 
 #### ▶️ Try it
 
 ```
+npm install
 npm run storybook
 ```
 
