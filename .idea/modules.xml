@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/ws/components-grading/.idea/components-grading.iml" filepath="$USER_HOME$/ws/components-grading/.idea/components-grading.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/edu-components-grading.iml" filepath="$PROJECT_DIR$/.idea/edu-components-grading.iml" />
     </modules>
   </component>

@@ -40,6 +40,8 @@ git commit -m "Initial Commit"
 
 > This will allow you to run `npm run dev` and `npm run build`!
 
+#### Instructions
+
 ```bash
 npm create vite@latest . -- --template react
 # Ignore files and continue
@@ -61,7 +63,7 @@ function App() {
 export default App
 EOF
 
-cat > ./src/index.html << 'EOF'
+cat > ./index.html << 'EOF'
 <!doctype html>
 <html lang="en">
   <head>
@@ -78,22 +80,40 @@ cat > ./src/index.html << 'EOF'
   </body>
 </html>
 EOF
- 
+```
+
+#### Repeaat
+
+```bash
+git reset --hard
+git clean -df
+```
+
+#### End trail
+
+```bash
 git add .
 git commit -m "Prepared Application development"
 ```
 
 ### Initialize component development
 
+#### Instructions
+
 ```bash
 npx storybook init --builder vite --use-npm --no-telemetry --no-install 
+```
 
+#### Repeaat
+
+```bash
+git reset --hard
+git clean -df
+```
+
+#### End trail
+
+```bash
 git add .
 git commit -m "Prepared Component development"
 ```
-
-<hr>
-
-### 2 - React with Vite
-
-> This allows you to use Storybook to create an Application.
