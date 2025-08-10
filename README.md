@@ -1,8 +1,46 @@
-# edu-components-grading
+# 💡 edu-components-grading
 
-## State lifting
+## 👣 Create a login component and lift state from user field, and password field.
 
-### Scaffold Login component
+### 📚 State
+
+> In React, `state` refers to the data or information that a component manages and can change over time. It determines how a component behaves and what it renders. State is usually used for things like user input, form values, or whether an element is visible.
+> Each React component can have its own state, and when the state changes, the component re-renders to reflect the new data. This makes your app interactive and dynamic.
+> For example, a button’s clicked state can change when it's pressed, and that change can be used to update the UI, such as showing a message or changing the button’s appearance.
+> In React, state is typically set using the useState hook for functional components.  
+> This efficient "reactive" behavior is a **key reason** behind the library’s name—React—as it reacts to state changes and updates the UI in a declarative way.
+
+### 📚 State lifting
+
+> State Lifting in React refers to the process of moving state from a child component to a common parent component in order to share data or allow multiple child
+> components to access and modify the same state. When two or more child components need to share state or communicate with each other,
+> it's often better to lift the state to their **nearest common ancestor** (the parent component).
+> The parent then passes the state down to its children via props, and the children can trigger updates by calling functions passed down as `props`.
+>   
+> This is particularly useful when managing form data, coordinating interactions between components, or synchronizing UI elements.
+
+### 📚 Atomic Design
+
+> [´Atomic Design`](https://atomicdesign.bradfrost.com) is a methodology for creating design systems and user interfaces by breaking down components into smaller, reusable building blocks. It was introduced by Brad Frost and is based on the concept of chemistry, where design elements are structured in five distinct levels:
+> 1. `Atoms`: The smallest, indivisible elements, such as buttons, inputs, or labels.
+> 2. `Molecules`: Groups of atoms that work together as a unit, like a form input with a label and button.
+> 3. `Organisms`: Complex components formed by groups of molecules, such as a navigation bar or a product card.
+> 4. `Templates: Page-level components that arrange organisms into a layout, like a homepage template.
+> 5. `Pages`: Specific instances of templates, populated with real content to represent actual screens in the application.
+> This approach promotes reusability, consistency, and scalability in design, making it easier to manage and evolve a design system over time. By starting with small, simple components and building up to more complex structures, Atomic Design creates a more modular and maintainable design process.
+>
+> A `Component developer` works with `Atoms`, `Molecules`, and `Organisms`, in the `sub system` `components`. 
+
+### 📚 Instructions
+
+> In this trail, we will lift state from the **User field**, and **Password Field** to the Login component.
+>
+> To achieve the grade of `gree belt` you need to complete this task in 15 minutes using only [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org).
+> No copy paste i allowed!  
+> CSS is not part of the grading!  
+> Grading must be performed before a `black belt`.  
+
+#### 🦶 Scaffold Login component
 
 ```bash
 cd ~
@@ -12,7 +50,7 @@ mkdir ./src/components/Login
 touch ./src/components/Login/index.js
 touch ./src/components/Login/Login.module.css
 touch ./src/components/Login/Login.styles.js
-touch ./src/components/Login/LoginMolecule.jsx
+touch ./src/components/Login/Login.molecule.jsx
 touch ./src/components/Login/UserAtom.jsx
 touch ./src/components/Login/PasswordAtom.jsx
 touch ./src/components/Login/LoginButtonAtom.jsx
