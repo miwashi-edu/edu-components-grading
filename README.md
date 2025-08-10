@@ -184,15 +184,25 @@ EOF
 #### 🦶 Login Button
 
 ```bash
-cat > ./src/components/Login/LoginButtonAtom.jsx << 'EOF'
+cat > ./src/components/Login/LoginButton.atom.jsx << 'EOF'
 import React from 'react';
 import styles from './Login.module.css';
 
-const LoginButton = ({ onClick }) => (
-  <button type="button" className={styles.button} onClick={onClick}>
-    Login
-  </button>
-);
+const LoginButton = ({ onClick }) => {
+    const handleClick = () => {
+        if (onClick) {
+            onClick();
+        } else {
+            alert('No login method provided');
+        }
+    };
+
+    return (
+        <button type="button" className={styles.button} onClick={handleClick}>
+            Login
+        </button>
+    );
+};
 
 export default LoginButton;
 EOF
@@ -344,24 +354,20 @@ EOF
 ```bash
 cat > ./src/components/Login/LoginButton.stories.jsx << 'EOF'
 import React from 'react';
-import LoginButtonAtom from './LoginButton.atom';
+import LoginButton from './LoginButton.atom';
 
 export default {
-  title: 'Components/LoginButtonAtom',
+  title: 'Components/Login/LoginButton',
   component: LoginButton,
-  parameters: {
-    docs: {
-      description: {
-        component: 'A styled button component that triggers a login action, using CSS Modules for styling.',
-      },
-    },
-  },
 };
 
 export const Default = {
   args: {
     onClick: () => alert('Login button clicked'),
   },
+};
+
+export const NoLoginMethodProvided = {
 };
 EOF
 ```
@@ -391,10 +397,14 @@ import * as Stories from './Login.stories';
 import React from 'react';
 import styles from './Login.module.css';
 
-
 export default Login;
+```
+
+### Login
 EOF
 ```
+
+### Login Button
 
 ### info.mdx
 
@@ -418,6 +428,11 @@ On this level, we will learn to lift states from sub components.
 
 - **LoginButton**
 : A component that is able to execute an in future provided login function.
+
+> Key Points:
+> 1. Wrapping the onClick: Instead of directly calling the onClick handler, we wrap it in a handleClick function. This allows us to add additional logic before calling onClick, such as checking whether it's provided and showing an alert if it isn't.
+> 2. Why Not Directly Call onClick?: Calling onClick directly without checking if it’s provided would lead to errors if onClick is undefined. Wrapping it provides a controlled way to handle this scenario and improves the robustness of the component.
+
 
 **To grade yourself `Green Belt`, you should complete this task in 15 minutes using only Vim and a terminal.**. Grading must be performed before a `black belt`.
 EOF
