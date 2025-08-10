@@ -119,11 +119,11 @@ EOF
 #### 🦶 User Field
 
 ```bash
-cat > ./src/components/Login/UserAtom.jsx << 'EOF'
+cat > ./src/components/Login/UserField.atom.jsx << 'EOF'
 import React from 'react';
 import styles from './Login.module.css';
 
-const UserAtom = ({ username, onUsernameChange }) => {
+const UserField = ({ username, onUsernameChange }) => {
     const handleChange = (e) => {
         const newValue = e.target.value;
         onUsernameChange(newValue);
@@ -144,7 +144,7 @@ const UserAtom = ({ username, onUsernameChange }) => {
     );
 };
 
-export default UserAtom;
+export default UserField;
 EOF
 ```
 
@@ -152,16 +152,18 @@ EOF
 #### 🦶 Password Field
 
 ```bash
-cat > ./src/components/Login/Password.atom.jsx << 'EOF'
+cat > ./src/components/Login/PasswordField.atom.jsx << 'EOF'
 import React from 'react';
 import styles from './Login.module.css';
 
-const PasswordField = ({ password, onPasswordChange }) => {
+const PasswordField = ({ password, onChange }) => {
+    if (!onChange) {
+        return (<div>No onChange method supplied.</div>);
+    }
     const handleChange = (e) => {
         const newValue = e.target.value;
-        onPasswordChange(newValue);
+        onChange(newValue);
     };
-
     return (
         <div>
             <label className={styles.label} htmlFor="password">Password</label>
@@ -176,7 +178,6 @@ const PasswordField = ({ password, onPasswordChange }) => {
         </div>
     );
 };
-
 export default PasswordField;
 EOF
 ```
@@ -212,7 +213,7 @@ EOF
 
 ⚠️ **Notice**: You can use `heredoc` for Login.module.css, it is not part of test!
 
-```css
+```bash
 cat > ./src/components/Login/Login.module.css << 'EOF'
 .container {
   display: flex;
@@ -320,32 +321,26 @@ EOF
 
 ```bash
 cat > ./src/components/Login/PasswordField.stories.jsx << 'EOF'
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PasswordField from './PasswordField.atom';
-
-const Template = (args) => {
-  const [password, setPassword] = useState(args.password || '');
-
-  return (
-      <PasswordField
-          {...args}
-          password={password}
-          onPasswordChange={setPassword}
-      />
-  );
-};
-
 export default {
-    title: 'Components/PasswordField',
-    component: Password,
-    render: Template,
+    title: 'Components/Login/PasswordField',
+    component: PasswordField,
 };
-
-export const Default = {
-  args: {
-    password: '',
-  },
+export const Default = () => {
+    const [password, setPassword] = useState('');
+    const handleChange = (newPassword) => {
+        console.log('setPassword called with:', newPassword);
+        setPassword(newPassword);
+    };
+    return (
+        <PasswordField
+            password={password}
+            onChange={handleChange}
+        />
+    );
 };
+export const NoOnChangeProvided = {};
 EOF
 ```
 
