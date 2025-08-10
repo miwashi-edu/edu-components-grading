@@ -10,33 +10,44 @@ On this level, we will learn to scaffold a component.
 A software component is a modular unit of software that encapsulates specific functionality. The desired characteristics of a component are reusability and maintainability.
 By treating the component as a small system, we can make it robust, long-living, and reusable.
 
-
 ![Tree diagram](./resources/tree.png)
 
 ### File List:
 
-- **index.js**
-: It helps the bundler locate and load your components.
+- **index.js**:
+It helps the bundler locate and load your components.
 
-- **Component.mdx**
-: The documentation file, which should describe the component’s functionality and usage.
+- **Component.mdx**:
+The documentation file, which should describe the component’s functionality and usage.
 
-- **Component.jsx**
-: The component file, which should have a single responsibility and export the component by default for the bundler to locate.
+- **Component.jsx**:
+The component file, which should have a single responsibility and export the component by default for the bundler to locate.
 
-- **Component.module.css**
-: It is scoped to the component and uses its own namespace, preventing CSS collision.
+- **Component.module.css**:
+It is scoped to the component and uses its own namespace, preventing CSS collision.
 
-- **Component.styles.js**
-: It contains dynamic styles, *CSS-in-JS* and, while slower than .css, can offer more flexibility. It is typically used less frequently, but the file must exist for quality even when not used.
+- **Component.styles.js**:
+It contains dynamic styles, *CSS-in-JS*, and, while slower than `.css`, can offer more flexibility. It is typically used less frequently, but the file must exist for quality even when not used.
 
-- **Component.stories.js**
-: It contains test stories for your component, designed to test its robustness. If the component passes all tests without issues, it has succeeded.
+- **Component.stories.js**:
+It contains test stories for your component, designed to test its robustness. If the component passes all tests without issues, it has succeeded.
 
-**To grade yourself `Yellow Belt`, you should complete this task in 4 minutes using only Vim and a terminal.**. Grading must be performed before a `black belt`.
+**To grade yourself `Yellow Belt`, you should complete this task in 4 minutes using only Vim and a terminal.** Grading must be performed before a `black belt`.
 
 ## Orange belt
-...
+
+On this level, we will focus on **creating a component that uses both CSS Modules and CSS-in-JS for styling**.
+
+You will learn how to **combine static styles (via CSS Modules)** and **dynamic styles (via CSS-in-JS)** in a single component. This approach allows for flexible and maintainable styling, while keeping styles modular and scoped to the component.
+
+At this level, you will:
+
+- Use **CSS Modules** for static, scoped styles that prevent conflicts.
+- Use **CSS-in-JS** for dynamic styling based on props or other component logic.
+
+**To grade yourself `Orange Belt`, you should complete this task in 6 minutes using only Vim and a terminal.**
+
+---
 
 ## Green belt
 ...

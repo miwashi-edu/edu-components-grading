@@ -1,0 +1,22 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import * as SampleStories from './Sample.stories'; // Import the stories
+
+<Meta of={SampleStories} />
+
+# Sample Component Documentation
+
+## Overview
+
+The `Sample` component is a simple, reusable component in React that renders the text **"Sample"**.
+It serves as a basic example of files needed for a component.
+
+### Code
+
+```javascript
+import React from 'react';
+
+export const Sample = () => {
+  return <>Sample</>;
+};
+
+export default Sample;
