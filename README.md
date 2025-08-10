@@ -214,6 +214,7 @@ const Styled = ({ text, fontSize }) => {
   // Dynamic styling based on the fontSize prop
   const dynamicStyle = dynamicStyles(fontSize);
 
+  // Inspect the tags in the browser and see how styles.StyledContainer are renamed to ensure scoping.
   return (
     <div className={styles.StyledContainer}>
       <div className={styles.StyledText} style={dynamicStyle.dynamicText}>
