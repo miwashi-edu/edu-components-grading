@@ -1,0 +1,1 @@
+export {Styled} from './components';
