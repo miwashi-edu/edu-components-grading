@@ -380,63 +380,8 @@ EOF
 
 ### Login.mdx
 
-```bash
-cat > ./src/components/Login/Login.mdx << 'EOF'
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
-import * as Stories from './Login.stories';
-
-<Meta of={Stories} />
-
-# Login Component Documentation
-
-## Overview
-
-## Code
-
-```javascript
-import React from 'react';
-import styles from './Login.module.css';
-
-export default Login;
-```
-
-### Login
-EOF
-```
-
-### Login Button
-
 ### info.mdx
 
-```bash
-cat > ./src/info.mdx <<
-# Welcome to components-grading
-## Green belt
-
-On this level, we will learn to lift states from sub components.
-
-### Component List:
-
-- **Login**
-: The component holding state for username, and password.
-
-- **UserField**
-: The component responsible for changing state for username.
-
-- **Password Filed**
-: The component  responsible for changing state for password.
-
-- **LoginButton**
-: A component that is able to execute an in future provided login function.
-
-> Key Points:
-> 1. Wrapping the onClick: Instead of directly calling the onClick handler, we wrap it in a handleClick function. This allows us to add additional logic before calling onClick, such as checking whether it's provided and showing an alert if it isn't.
-> 2. Why Not Directly Call onClick?: Calling onClick directly without checking if it’s provided would lead to errors if onClick is undefined. Wrapping it provides a controlled way to handle this scenario and improves the robustness of the component.
-
-
-**To grade yourself `Green Belt`, you should complete this task in 15 minutes using only Vim and a terminal.**. Grading must be performed before a `black belt`.
-EOF
-```
 
 ---
 ---
