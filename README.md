@@ -76,7 +76,190 @@ export {Login} from './components';
 EOF
 ```
 
+#### 🦶 Login Button
+
+##### Component
+
+```bash
+cat > ./src/components/Login/LoginButton.atom.jsx << 'EOF'
+import React from 'react';
+import styles from './Login.module.css';
+
+const LoginButton = ({ onClick }) => {
+    const handleClick = () => {
+        if (onClick) {
+            onClick();
+        } else {
+            alert('No login method provided');
+        }
+    };
+
+    return (
+        <button type="button" className={styles.button} onClick={handleClick}>
+            Login
+        </button>
+    );
+};
+
+export default LoginButton;
+EOF
+```
+
+##### Storybook
+
+```bash
+cat > ./src/components/Login/LoginButton.stories.jsx << 'EOF'
+import React from 'react';
+import LoginButton from './LoginButton.atom';
+
+export default {
+  title: 'Components/Login/LoginButton',
+  component: LoginButton,
+};
+
+export const Default = {
+  args: {
+    onClick: () => alert('Login button clicked'),
+  },
+};
+
+export const NoLoginMethodProvided = {
+};
+EOF
+```
+
+#### 🦶 User Field
+
+##### Component
+
+```bash
+cat > ./src/components/Login/UserField.atom.jsx << 'EOF'
+import React from 'react';
+import styles from './Login.module.css';
+
+const UserField = ({ username, onChange }) => {
+    if (!onChange) {
+        return (<div>No onChange method supplied.</div>);
+    }
+    const handleChange = (e) => {
+        const newValue = e.target.value;
+        onChange(newValue);
+    };
+
+    return (
+        <div>
+            <label className={styles.label} htmlFor="username">Username</label>
+            <input
+                id="username"
+                type="text"
+                value={username}
+                onChange={handleChange}
+                className={styles.inputField}
+                placeholder="Enter your username"
+            />
+        </div>
+    );
+};
+
+export default UserField;
+EOF
+```
+
+##### Storybook
+
+```bash
+cat > ./src/components/Login/UserField.stories.jsx << 'EOF'
+import React, { useState } from 'react';
+import UserField from './UserField.atom';
+export default {
+  title: 'Components/Login/UserField',
+  component: UserField,
+};
+export const Default = () => {
+  const [user, setUser] = useState('');
+  const handleChange = (newUser) => {
+    console.log('setUser called with:', newUser);
+    setUser(newUser);
+  };
+  return (
+      <UserField
+          user={user}
+          onChange={handleChange}
+      />
+  );
+};
+export const NoOnChangeProvided = {};
+EOF
+```
+
+#### 🦶 Password Field
+
+##### Component
+
+```bash
+cat > ./src/components/Login/PasswordField.atom.jsx << 'EOF'
+import React from 'react';
+import styles from './Login.module.css';
+
+const PasswordField = ({ password, onChange }) => {
+    if (!onChange) {
+        return (<div>No onChange method supplied.</div>);
+    }
+    const handleChange = (e) => {
+        const newValue = e.target.value;
+        onChange(newValue);
+    };
+    return (
+        <div>
+            <label className={styles.label} htmlFor="password">Password</label>
+            <input
+                id="password"
+                type="password"
+                value={password}
+                onChange={handleChange}
+                className={styles.inputField}
+                placeholder="Enter your password"
+            />
+        </div>
+    );
+};
+export default PasswordField;
+EOF
+```
+
+##### Storybook
+
+
+#### 🦶 Password Field Storybook
+
+```bash
+cat > ./src/components/Login/PasswordField.stories.jsx << 'EOF'
+import React, { useState } from 'react';
+import PasswordField from './PasswordField.atom';
+export default {
+    title: 'Components/Login/PasswordField',
+    component: PasswordField,
+};
+export const Default = () => {
+    const [password, setPassword] = useState('');
+    const handleChange = (newPassword) => {
+        console.log('setPassword called with:', newPassword);
+        setPassword(newPassword);
+    };
+    return (
+        <PasswordField
+            password={password}
+            onChange={handleChange}
+        />
+    );
+};
+export const NoOnChangeProvided = {};
+EOF
+```
+
 #### 🦶 Login Dialogue
+
+##### Component
 
 ```bash
 cat > ./src/components/Login/Login.molecule.jsx << 'EOF'
@@ -119,104 +302,34 @@ export default Login;
 EOF
 ```
 
-
-#### 🦶 User Field
-
-```bash
-cat > ./src/components/Login/UserField.atom.jsx << 'EOF'
-import React from 'react';
-import styles from './Login.module.css';
-
-const UserField = ({ username, onChange }) => {
-    if (!onChange) {
-        return (<div>No onChange method supplied.</div>);
-    }
-    const handleChange = (e) => {
-        const newValue = e.target.value;
-        onChange(newValue);
-    };
-
-    return (
-        <div>
-            <label className={styles.label} htmlFor="username">Username</label>
-            <input
-                id="username"
-                type="text"
-                value={username}
-                onChange={handleChange}
-                className={styles.inputField}
-                placeholder="Enter your username"
-            />
-        </div>
-    );
-};
-
-export default UserField;
-EOF
-```
-
-
-#### 🦶 Password Field
+##### Storybook
 
 ```bash
-cat > ./src/components/Login/PasswordField.atom.jsx << 'EOF'
+cat > ./src/components/Login/Login.stories.jsx << 'EOF'
 import React from 'react';
-import styles from './Login.module.css';
+import Login from './Login.molecule';
 
-const PasswordField = ({ password, onChange }) => {
-    if (!onChange) {
-        return (<div>No onChange method supplied.</div>);
-    }
-    const handleChange = (e) => {
-        const newValue = e.target.value;
-        onChange(newValue);
-    };
-    return (
-        <div>
-            <label className={styles.label} htmlFor="password">Password</label>
-            <input
-                id="password"
-                type="password"
-                value={password}
-                onChange={handleChange}
-                className={styles.inputField}
-                placeholder="Enter your password"
-            />
-        </div>
-    );
-};
-export default PasswordField;
-EOF
-```
-
-#### 🦶 Login Button
-
-```bash
-cat > ./src/components/Login/LoginButton.atom.jsx << 'EOF'
-import React from 'react';
-import styles from './Login.module.css';
-
-const LoginButton = ({ onClick }) => {
-    const handleClick = () => {
-        if (onClick) {
-            onClick();
-        } else {
-            alert('No login method provided');
-        }
-    };
-
-    return (
-        <button type="button" className={styles.button} onClick={handleClick}>
-            Login
-        </button>
-    );
+export default {
+  title: 'Components/Login',
+  component: Login,
 };
 
-export default LoginButton;
+export const Default = {
+  args: {
+    onLogin: () => console.log('Login button clicked'),
+  },
+};
+
+export const NoLoginMethodProvided = {
+};
 EOF
 ```
 
 #### 🦶 Login.module.css
+
+---
+
+## CSS (not part of tutorial)
 
 ⚠️ **Notice**: You can use `heredoc` for Login.module.css, it is not part of test!
 
@@ -272,108 +385,6 @@ cat > ./src/components/Login/Login.module.css << 'EOF'
   font-weight: bold;
 }
 EOF
-```
-
-#### 🦶 Login storybook
-
-```bash
-cat > ./src/components/Login/Login.stories.jsx << 'EOF'
-import React from 'react';
-import Login from './Login.molecule';
-
-export default {
-  title: 'Components/Login',
-  component: Login,
-};
-
-export const Default = {
-  args: {
-    onLogin: () => console.log('Login button clicked'),
-  },
-};
-
-export const NoLoginMethodProvided = {
-};
-EOF
-```
-
-#### 🦶 User Field storybook
-
-```bash
-cat > ./src/components/Login/UserField.stories.jsx << 'EOF'
-import React, { useState } from 'react';
-import UserField from './UserField.atom';
-export default {
-  title: 'Components/Login/UserField',
-  component: UserField,
-};
-export const Default = () => {
-  const [user, setUser] = useState('');
-  const handleChange = (newUser) => {
-    console.log('setUser called with:', newUser);
-    setUser(newUser);
-  };
-  return (
-      <UserField
-          user={user}
-          onChange={handleChange}
-      />
-  );
-};
-export const NoOnChangeProvided = {};
-EOF
-```
-
-#### 🦶 Password Field Storybook
-
-```bash
-cat > ./src/components/Login/PasswordField.stories.jsx << 'EOF'
-import React, { useState } from 'react';
-import PasswordField from './PasswordField.atom';
-export default {
-    title: 'Components/Login/PasswordField',
-    component: PasswordField,
-};
-export const Default = () => {
-    const [password, setPassword] = useState('');
-    const handleChange = (newPassword) => {
-        console.log('setPassword called with:', newPassword);
-        setPassword(newPassword);
-    };
-    return (
-        <PasswordField
-            password={password}
-            onChange={handleChange}
-        />
-    );
-};
-export const NoOnChangeProvided = {};
-EOF
-```
-
-#### 🦶 Login Button Storybook
-
-```bash
-cat > ./src/components/Login/LoginButton.stories.jsx << 'EOF'
-import React from 'react';
-import LoginButton from './LoginButton.atom';
-
-export default {
-  title: 'Components/Login/LoginButton',
-  component: LoginButton,
-};
-
-export const Default = {
-  args: {
-    onClick: () => alert('Login button clicked'),
-  },
-};
-
-export const NoLoginMethodProvided = {
-};
-EOF
-```
-
 
 ---
 ---
