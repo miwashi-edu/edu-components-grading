@@ -229,9 +229,6 @@ EOF
 
 ##### Storybook
 
-
-#### 🦶 Password Field Storybook
-
 ```bash
 cat > ./src/components/Login/PasswordField.stories.jsx << 'EOF'
 import React, { useState } from 'react';
