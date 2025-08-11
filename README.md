@@ -86,32 +86,36 @@ import UserField from './UserField.atom';
 import PasswordField from './PasswordField.atom';
 import LoginButton from './LoginButton.atom';
 
-const LoginMolecule = () => {
+const Login = ({onLogin}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  // Handle login click with basic validation
+  if (!onLogin) {
+    return (<div>No onLogin method provided.</div>);
+  }
+
   const handleLogin = () => {
+    setError()
     if (username === '' || password === '') {
       setError('Username and password cannot be empty.');
     } else {
       setError('');
-      console.log(`Logging in with Username: ${username} and Password: ${password}`);
     }
+    onLogin();
   };
 
   return (
     <div className={styles.container}>
-      <UserField username={username} onUsernameChange={setUsername} />
-      <PasswordField password={password} onPasswordChange={setPassword} />
+      <UserField username={username} onChange={setUsername} />
+      <PasswordField password={password} onChange={setPassword} />
       <LoginButton onClick={handleLogin} />
       {error && <div className={styles.errorText}>{error}</div>}
     </div>
   );
 };
 
-export default LoginMolecule;
+export default Login;
 EOF
 ```
 
@@ -123,10 +127,13 @@ cat > ./src/components/Login/UserField.atom.jsx << 'EOF'
 import React from 'react';
 import styles from './Login.module.css';
 
-const UserField = ({ username, onUsernameChange }) => {
+const UserField = ({ username, onChange }) => {
+    if (!onChange) {
+        return (<div>No onChange method supplied.</div>);
+    }
     const handleChange = (e) => {
         const newValue = e.target.value;
-        onUsernameChange(newValue);
+        onChange(newValue);
     };
 
     return (
@@ -280,6 +287,12 @@ export default {
 };
 
 export const Default = {
+  args: {
+    onLogin: () => console.log('Login button clicked'),
+  },
+};
+
+export const NoLoginMethodProvided = {
 };
 EOF
 ```
@@ -287,33 +300,27 @@ EOF
 #### 🦶 User Field storybook
 
 ```bash
-cat > ./src/components/Login/User.stories.jsx << 'EOF'
+cat > ./src/components/Login/UserField.stories.jsx << 'EOF'
 import React, { useState } from 'react';
 import UserField from './UserField.atom';
-
-const Template = (args) => {
-  const [username, setUsername] = useState(args.username || '');
-
+export default {
+  title: 'Components/Login/UserField',
+  component: UserField,
+};
+export const Default = () => {
+  const [user, setUser] = useState('');
+  const handleChange = (newUser) => {
+    console.log('setUser called with:', newUser);
+    setUser(newUser);
+  };
   return (
-      <User
-          {...args}
-          username={username}
-          onUsernameChange={setUsername}
+      <UserField
+          user={user}
+          onChange={handleChange}
       />
   );
 };
-
-export default {
-  title: 'Components/UserField',
-  component: UserField,
-  render: Template,
-};
-
-export const Default = {
-  args: {
-    username: '',
-  },
-};
+export const NoOnChangeProvided = {};
 EOF
 ```
 
