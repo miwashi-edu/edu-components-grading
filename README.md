@@ -35,7 +35,7 @@
 
 > In this trail, we will lift state from the **User field**, and **Password Field** to the Login component.
 >
-> To achieve the grade of `gree belt` you need to complete this task in 15 minutes using only [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org).
+> To achieve the grade of `green belt` you need to complete this task in 15 minutes using only [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org).
 > No copy paste i allowed!  
 > CSS is not part of the grading!  
 > Grading must be performed before a `black belt`.  
