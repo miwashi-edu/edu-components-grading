@@ -23,7 +23,17 @@
 > toggling a theme, enabling/disabling inputs, or displaying shared user information across several components.
 
 
-### Scaffold Drill component
+### 📚 Instructions
+
+> In this trail, we will lift state from the **LanguageSwitcher**, and propagate it to **Card**, to display the result in the **Drill** component.
+> The state is owned by the Drill component.
+>
+> To achieve the grade of `blue belt` you need to complete this task in 15 minutes using only [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org).
+> No copy paste i allowed!  
+> CSS is not part of the grading!  
+> Grading must be performed before a `black belt`.
+
+#### 🦶 Scaffold Drill component
 
 ```bash
 cd ~
@@ -40,15 +50,7 @@ touch ./src/components/Drill/LanguageSwitcher.stories.jsx
 touch ./src/components/Drill/Card.stories.jsx
 touch ./src/components/Drill/Drill.stories.jsx
 ```
-### 📚 Instructions
 
-> In this trail, we will lift state from the **LanguageSwitcher**, and propagate it to **Card**, to display the result in the **Drill** component.
-> The state is owned by the Drill component.
->
-> To achieve the grade of `blue belt` you need to complete this task in 15 minutes using only [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org).
-> No copy paste i allowed!  
-> CSS is not part of the grading!  
-> Grading must be performed before a `black belt`.
 
 #### 🦶 Barrel files
 
