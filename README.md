@@ -33,12 +33,12 @@ mkdir ./src/components/Drill
 touch ./src/components/Drill/index.js
 touch ./src/components/Drill/Drill.module.css
 touch ./src/components/Drill/Drill.styles.js
-touch ./src/components/Drill/Drill.molecule.jsx
 touch ./src/components/Drill/LanguageSwitcher.atom.jsx
 touch ./src/components/Drill/Card.atom.jsx
-touch ./src/components/Drill/Drill.stories.jsx
-touch ./src/components/Drill/Card.stories.jsx
+touch ./src/components/Drill/Drill.molecule.jsx
 touch ./src/components/Drill/LanguageSwitcher.stories.jsx
+touch ./src/components/Drill/Card.stories.jsx
+touch ./src/components/Drill/Drill.stories.jsx
 ```
 ### 📚 Instructions
 
@@ -166,7 +166,7 @@ import React from 'react';
 import Card from './Card.atom';
 
 export default {
-    title: 'Drill/CardAtom',
+    title: 'Drill/Card',
     component: Card,
 };
 
@@ -232,7 +232,7 @@ import React from 'react';
 import {Drill} from './index';
 
 export default {
-    title: 'Drill/Drill',
+    title: 'Drill',
     component: Drill,
 };
 
