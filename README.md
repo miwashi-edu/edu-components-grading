@@ -10,11 +10,6 @@
 > allowing dynamic UI composition without changing the underlying code.
 
 
-```html
-<FlexGridStructure data={providedData}>
-  <Card />
-</FlexGridStructure>
-```
 
 
 ```html
@@ -34,13 +29,13 @@
 > In this trail, we will lift state from the **LanguageSwitcher**, and propagate it to **Card**, to display the result in the **Drill** component.
 > The state is owned by the Drill component.
 >
-> To achieve the grade of `blue belt` you need to complete this task using only [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org).
+> To achieve the grade of `brown belt` you need to complete this task using only [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org).
 > There is no time limit!
 > No copy paste i allowed!  
 > CSS is not part of the grading!  
 > Grading must be performed before a `black belt`.
 
-### Scaffold Structural Adapters module
+### 🦶 Scaffold
 
 ```bash
 cd ~
@@ -50,45 +45,69 @@ mkdir ./src/components/StructuralAdapter
 touch ./src/components/StructuralAdapter/index.js
 touch ./src/components/StructuralAdapter/StructuralAdapter.module.css
 touch ./src/components/StructuralAdapter/StructuralAdapter.styles.js
-touch ./src/components/StructuralAdapter/FlexGridStructure.jsx
-touch ./src/components/StructuralAdapter/RecursiveStructure.jsx
 touch ./src/components/StructuralAdapter/Card.jsx
 touch ./src/components/StructuralAdapter/InfoBox.jsx
 touch ./src/components/StructuralAdapter/DirectoryInfo.jsx
-touch ./src/components/StructuralAdapter/FlexGridStructure.stories.jsx
-touch ./src/components/StructuralAdapter/RecursiveStructure.stories.jsx
 touch ./src/components/StructuralAdapter/Card.stories.jsx
 touch ./src/components/StructuralAdapter/InfoBox.stories.jsx
 touch ./src/components/StructuralAdapter/DirectoryInfo.stories.jsx
-touch ./src/components/StructuralAdapter/recursiveDirectoryData.json
-touch ./src/components/StructuralAdapter/recursiveNodeData.json
-touch ./src/components/StructuralAdapter/flexboxDirectoryData.json
-touch ./src/components/StructuralAdapter/flexboxCardData.json
-touch ./src/components/StructuralAdapter/flexboxInfoData.json
-touch ./src/components/StructuralAdapter/
 ```
 
-### Structural Adapters
+### 🦶 Card
 
-#### FlexGridStructure
-
-##### Component
+#### Component
 
 ```bash
-cat > ./src/components/StructuralAdapter/FlexGridStructure.jsx << 'EOF'
-EOF
 ```
 
-##### Story
+#### Storybook
 
 ```bash
-cat > ./src/components/StructuralAdapter/FlexGridStructure.stories.jsx << 'EOF'
-EOF
 ```
 
-#### FlexBoxStructure
+### 🦶 InfoBox
 
-##### Component
+#### Component
+
+```bash
+```
+#### Storybook
+
+```bash
+```
+
+### 🦶 DirectoryInfo
+
+#### Component
+
+```bash
+```
+
+#### Storybook
+
+```bash
+```
+
+### 👣 FlexGridStructure
+
+#### 📚 Usage
+
+> The FlexGridStructure, uses the child component as template, then populates a flex grid based on providedData, and the template.
+
+```html
+<FlexGridStructure data={providedData}>
+  <Card />
+</FlexGridStructure>
+```
+
+#### 🦶 Scaffold
+
+```bash
+touch ./src/components/StructuralAdapter/FlexGridStructure.jsx
+touch ./src/components/StructuralAdapter/FlexGridStructure.stories.jsx
+```
+
+#### Component
 
 ```bash
 cat > ./src/components/StructuralAdapter/FlexBoxStructure.jsx << 'EOF'
