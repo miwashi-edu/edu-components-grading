@@ -1,9 +1,13 @@
-# edu-components-grading
+# 💡 edu-components-grading
 
-## Structural Adapter
+## 👣 Create three Structural Adapters
 
-> A structural adapter use external json to form itself. This json is provided from a restful backend webservice.
-> A structural adapter can be configured trough html to use different components in its structure.
+### 📚 Structural adapter
+
+> A structural adapter uses external JSON data to define and construct its own structure. This JSON is typically provided by a RESTful
+> backend web service and describes how the adapter should assemble and configure its internal layout.
+> A structural adapter can be customized through HTML or configuration to use different components in its structure,
+> allowing dynamic UI composition without changing the underlying code.
 
 
 ```html
@@ -24,6 +28,17 @@
   <DirectoryInfo />
 </RecursiveStructure>
 ```
+
+### 📚 Instructions
+
+> In this trail, we will lift state from the **LanguageSwitcher**, and propagate it to **Card**, to display the result in the **Drill** component.
+> The state is owned by the Drill component.
+>
+> To achieve the grade of `blue belt` you need to complete this task using only [`bash`](https://www.gnu.org/s/bash/manual/bash.html) and [`vim`](https://www.vim.org).
+> There is no time limit!
+> No copy paste i allowed!  
+> CSS is not part of the grading!  
+> Grading must be performed before a `black belt`.
 
 ### Scaffold Structural Adapters module
 
@@ -58,7 +73,7 @@ touch ./src/components/StructuralAdapter/
 #### FlexGridStructure
 
 ##### Component
- 
+
 ```bash
 cat > ./src/components/StructuralAdapter/FlexGridStructure.jsx << 'EOF'
 EOF
@@ -74,7 +89,7 @@ EOF
 #### FlexBoxStructure
 
 ##### Component
- 
+
 ```bash
 cat > ./src/components/StructuralAdapter/FlexBoxStructure.jsx << 'EOF'
 import React from 'react';
@@ -149,7 +164,7 @@ EOF
 #### RecursiveStructure
 
 ##### Component
- 
+
 ```bash
 cat > ./src/components/StructuralAdapter/RecursiveStructure.jsx << 'EOF'
 import React from 'react';
@@ -218,3 +233,53 @@ export const MissingChild = {
 }
 EOF
 ```
+
+## CSS (not part of tutorial)
+
+⚠️ **Notice**: You can use `heredoc` for Login.module.css, it is not part of test!
+
+```css
+cat > ./src/components/Drill/Drill.module.css << 'EOF'
+.drillContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.switcher {
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+EOF
+```
+
+---
+---
+
+## 📋 You can clone and run this Tutorial from here
+
+> ⚠️ **Warning**: This part is only if you start from here.
+
+```bash
+cd ~
+[ -d ws ] && cd ws || { echo -e '\033[1;31mcreate workspace first!\033[0m'; return 1; }
+rm -rf components-grading
+git clone --single-branch --branch 5-Brown https://github.com/miwashi-edu/edu-components-grading.git components-grading
+cd components-grading
+rm -rf .git # Remove history
+git init
+git add .
+git commit -m "Initial Commit"
+npm install
+```
+
