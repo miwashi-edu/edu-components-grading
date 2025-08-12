@@ -1,0 +1,21 @@
+.StyledContainer {
+    border: 2px solid gray;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.StyledText {
+    color: blue;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid lightgray;
+}
+
+.errorText {
+    color: red;
+    border: 1px dashed red;
+    padding: 5px;
+    font-weight: bold;
+}
