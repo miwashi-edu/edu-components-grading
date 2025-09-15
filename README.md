@@ -50,7 +50,7 @@ EOF
 ```bash
 cat > ./src/components/Sample/Sample.stories.jsx << 'EOF'
 import {React} from 'react';
-import Sample from '.';
+import {Sample} from '.';
 
 export default {
   title: 'Components/Sample',
