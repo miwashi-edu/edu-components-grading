@@ -1,4 +1,4 @@
-# 💡 edu-components-grading
+# 💡 edu-components-grading 黄帯
 
 ## 👣 set up Component + Story
 
