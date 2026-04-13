@@ -1,4 +1,4 @@
-# 💡 edu-components-grading
+# 💡 edu-components-grading 白帯
 
 > This tutorial will set up a **[React](https://react.dev)** project with [Vite](https://vite.dev)
 > for component and application developmment.  
